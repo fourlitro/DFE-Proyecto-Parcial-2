@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO list</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header class="menu">
+        <section class="menu__header">
+            <h1>TODO List 4litro</h1>
+        </section>
+
+        <nav class="header__nav">
+            <a href="#tareas">Tareas</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Aqui se vera la tabla-->
+        <section class="task-table">
+            <div class="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titulo</th>
+                            <th>Descripción</th>
+                            <th>Tarea</th>
+                            <th>Prioridad</th>
+                            <th>Tag</th>
+                            <th>Fecha</th>
+                            <th></th> <!--aqui añadiremos los botones-->
+                        </tr>
+                    </thead>
+                    <tbody id="data-table-body">
+                        <!-- Llenaremos la tabla con datos consumidos desde una api -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="message" class="message">
+                <p>No hay tareas asignadas.</p>
+            </div>
+
+        </section>
+
+        <!-- aside que agrega tareas-->
+        <section class="aside">
+            <div>
+                <h1><strong>AGREGAR TAREA</strong></h1>
+            </div>
+            <form id="task-form" class="form-section">
+                <label for="task-title">Título de la Tarea:</label>
+                <input type="text" id="task-title" name="title" required>
+
+                <label for="task-description">Descripción de la Tarea:</label>
+                <textarea id="task-description" name="description" required></textarea>
+
+                <label for="task-completed">¿La Tarea ha sido Completada?</label>
+                <input type="checkbox" id="task-completed" name="completed">
+
+                <label for="task-priority">Prioridad:</label>
+                <select id="task-priority" name="priority">
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+
+                <label for="task-tag">Etiqueta:</label>
+                <input type="text" id="task-tag" name="tag">
+
+                <label for="task-dueDate">Fecha de Vencimiento:</label>
+                <input type="date" id="task-dueDate" name="dueDate">
+
+                <button type="submit" class="btn-submit">Agregar Tarea</button>
+            </form>
+        </section>
+    </main>
+    <!-- Sección de Footer -->
+
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <h6 class="footer__txt"> Desarrollado por Alexis Suarez</h6>
+            <h6 class="footer__txt"> || </h6>
+
+            <a href="https://www.linkedin.com/in/alexisuarez" class="footer__a"><img src="assets/imgs/icon_linkedin.svg"
+                    class="footer__icon"></a>
+
+            <a href="https://github.com/fourlitro"><img src="assets/imgs/icon_github.svg" class="footer__icon"></a>
+        </div>
+    </footer>
+
+    <button id="btn-ir-arriba">
+        <svg viewBox="0 0 24 24">
+            <path d="m4 16 8-8 8 8"></path>
+        </svg>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

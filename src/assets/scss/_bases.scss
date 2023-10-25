@@ -1,0 +1,23 @@
+#btn-ir-arriba {
+    display: none;
+    cursor: pointer;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: var(--color-link);
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    border: none;
+
+    box-shadow: 0px 12px 7px rgba(0, 0, 0, .1);
+    transition: 300ms ease;
+}
+
+#btn-ir-arriba:hover {
+    background: var(--color-font);
+    transform: translateY(-0.5rem);
+}

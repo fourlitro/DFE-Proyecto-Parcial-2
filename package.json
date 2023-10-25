@@ -4,7 +4,10 @@
   "description": "proyecto del 2do parcial de la materia de Diseño Front End",
   "main": "index.html",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run watch:sass\" \"npm run serve\"",
+    "serve": "live-server src",
+    "watch:sass": "node-sass --output-style expanded src/assets/scss/styles.scss src/assets/css/styles.css --watch"
   },
   "repository": {
     "type": "git",
@@ -13,8 +16,8 @@
   "author": "Alexis Suarez",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.2",
+    "concurrently": "^8.2.1",
     "live-server": "^1.2.2",
-    "sass": "^1.69.4"
+    "node-sass": "^9.0.0"
   }
 }

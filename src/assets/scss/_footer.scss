@@ -1,0 +1,43 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.footer__contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+.footer__txt{
+    transition: all 0.5s;
+    margin-right: 1rem;
+}
+
+.footer__icon{
+    width: 70%;
+    transition: all 0.5s;
+    &:hover {
+        color: #fff;
+        border-radius: 0.25rem;
+        background-color: var(--color-t2);
+        transform: translateY(-0.5rem);
+    }
+}
+
+
+/* Responsive mobiles */
+@media screen and (max-width: 767px) {
+ 
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1193px) {
+
+}
+
