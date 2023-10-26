@@ -1,3 +1,57 @@
+:root {
+    --color-fondo: #000;
+    --color-about: #0e162d;
+    --color-link: #fec32b;
+    --color-link2: #FF312E;
+    --color-t1: #ed1d7f;
+    --color-t2: #00acee;
+    --color-t3: #22181C;
+    --color-t4: #EFF1F3;
+    --color-font: #fff;
+    --color-tabla: #DEDEE0;
+    
+    --font: 'Josefin Sans', sans-serif;
+
+    --color-background-header: #0e162d;
+
+}
+
+body {
+    box-sizing: border-box;
+    color: var(--color-font);
+    background-color: var(--color-fondo);
+    font-family: var(--font);
+    margin: 0;
+    padding: 0%;
+    line-height: 1;
+}
+
+
+/*para la barra scroll*/
+body::-webkit-scrollbar {
+    width: 1.5vh;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #fec32b;
+}
+
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 #btn-ir-arriba {
     display: none;
     cursor: pointer;

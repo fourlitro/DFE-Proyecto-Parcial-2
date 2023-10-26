@@ -53,6 +53,54 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --color-fondo: #000;
+  --color-about: #0e162d;
+  --color-link: #fec32b;
+  --color-link2: #FF312E;
+  --color-t1: #ed1d7f;
+  --color-t2: #00acee;
+  --color-t3: #22181C;
+  --color-t4: #EFF1F3;
+  --color-font: #fff;
+  --font: 'Josefin Sans', sans-serif;
+  --color-background-header: #0e162d;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--color-font);
+  background-color: var(--color-fondo);
+  font-family: var(--font);
+  margin: 0;
+  padding: 0%;
+  line-height: 1;
+}
+
+/*para la barra scroll*/
+body::-webkit-scrollbar {
+  width: 1.5vh;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #fec32b;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #btn-ir-arriba {
   display: none;
   cursor: pointer;
@@ -74,9 +122,32 @@ a {
   transform: translateY(-0.5rem);
 }
 
+.menu__header {
+  background-color: var(--color-background-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 2.5rem;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.menu__title {
+  font-size: 2.5rem;
+}
+
+/* Responsive mobiles */
+/* Tablets */
+.task-table {
+  padding: 5%;
+}
+
 .footer {
   display: flex;
   justify-content: center;
+  background-color: #000;
 }
 
 .footer__contenedor {
@@ -108,6 +179,3 @@ a {
 
 /* Responsive mobiles */
 /* Tablets */
-body {
-  background-color: #f3f0d8;
-}
