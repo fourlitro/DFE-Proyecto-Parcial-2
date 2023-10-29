@@ -19,7 +19,7 @@
         <!-- Aqui se vera la tabla-->
         <section class="task-table">
             <div class="table-container">
-                <table id="data-table">
+                <table id="data-table" class="data-table">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -45,18 +45,24 @@
 
         <!-- aside que agrega tareas-->
         <section class="aside">
-            <div>
+            <div class="aside_title">
                 <h1><strong>AGREGAR TAREA</strong></h1>
+                <br>
             </div>
             <form id="task-form" class="form-section">
                 <label for="task-title">Título de la Tarea:</label>
                 <input type="text" id="task-title" name="title" required>
 
                 <label for="task-description">Descripción de la Tarea:</label>
-                <textarea id="task-description" name="description" required></textarea>
+                <textarea id="task-description" name="description" class="desc" required></textarea>
 
-                <label for="task-completed">¿La Tarea ha sido Completada?</label>
-                <input type="checkbox" id="task-completed" name="completed">
+                <div class="task-completed">
+                    <label for="task-completed">¿La Tarea ha sido Completada?</label>
+                    <select id="task-completed" name="completed">
+                        <option value="Alta">Si</option>
+                        <option value="Media">No</option>
+                    </select>
+                </div>
 
                 <label for="task-priority">Prioridad:</label>
                 <select id="task-priority" name="priority">
@@ -71,9 +77,69 @@
                 <label for="task-dueDate">Fecha de Vencimiento:</label>
                 <input type="date" id="task-dueDate" name="dueDate">
 
-                <button type="submit" class="btn-submit">Agregar Tarea</button>
+                <div class="form-botones">
+                    <button type="submit" class="btn-submit">Agregar Tarea</button>
+                    <button type="reset" class="btn-reset">Limpiar</button>
+                </div>
+
             </form>
         </section>
+
+        <!-- Modal para editar -->
+        <div id="modal-background" class="modal-background">
+
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal_title">
+                <h1><strong>EDITAR TAREA</strong></h1>
+                <br>
+            </div>
+            <form id="u-task-form" class="form-section-modal">
+                <div class="section-modal">
+
+                    <label for="u-task-id">ID: </label>
+                    <input type="text" id="u-task-id" required readonly>
+
+
+
+                    <label for="u-task-title">Título de la Tarea:</label>
+                    <input type="text" id="u-task-title" name="title" required>
+
+                    <label for="u-task-description">Descripción de la Tarea:</label>
+                    <textarea id="u-task-description" name="description" class="desc" required></textarea>
+
+                    <div class="u-task-completed">
+                        <label for="u-task-completed">¿La Tarea ha sido Completada?</label>
+                        <select id="u-task-completed" name="completed">
+                            <option value="Alta">Si</option>
+                            <option value="Media">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section-modal">
+                    <label for="u-task-priority">Prioridad:</label>
+                    <select id="u-task-priority" name="priority">
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+
+                    <label for="u-task-tag">Etiqueta:</label>
+                    <input type="text" id="u-task-tag" name="tag">
+
+                    <label for="u-task-dueDate">Fecha de Vencimiento:</label>
+                    <input type="date" id="u-task-dueDate" name="dueDate">
+
+                    <div class="form-botones">
+                        <button type="submit" class="btn-submit">Actualizar Tarea</button>
+                        <button type="reset" class="btn-reset">Limpiar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
     </main>
     <!-- Sección de Footer -->
 
@@ -94,6 +160,8 @@
             <path d="m4 16 8-8 8 8"></path>
         </svg>
     </button>
+    <script src="js/utils.js"></script>
+    <script src="js/fetch-api.js"></script>
     <script src="js/script.js"></script>
 </body>
 

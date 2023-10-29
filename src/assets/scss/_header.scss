@@ -5,10 +5,8 @@
     justify-content: center;
     padding-top: 2%;
     padding-bottom: 2%;
-    height: 2.5rem;
-    position: relative;
-
-    transition: all 0.5s;
+    max-height: 2.5rem;
+    
 }
 
 .menu__title{
@@ -17,7 +15,9 @@
 
 /* Responsive mobiles */
 @media screen and (max-width: 767px) {
-    
+    .menu__title{
+        font-size: 1.5rem;
+    }
 
    
 }

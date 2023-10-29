@@ -1,0 +1,59 @@
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    button{
+      font-size: 1rem;
+    }
+  }
+  .form-section-modal{
+    display: flex;
+  }
+
+  .section-modal{
+    padding: 1rem;
+  }
+
+  .modal_title{
+    color: #000;
+  }
+  
+  label{
+    color: #000;
+  }
+
+  
+/* Responsive mobiles */
+@media screen and (max-width: 767px) {
+  
+  .modal{
+    font-size: 0.5rem; 
+  }
+  .form-section-modal{
+    flex-wrap: wrap;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1193px) {
+  
+}
+  
